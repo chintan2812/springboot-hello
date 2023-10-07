@@ -29,7 +29,7 @@ pipeline {
         stage('Docker Login'){
             
             steps {
-                 withCredentials([string(credentialsId: 'DockerId', variable: 'Dockerpwd')]) {
+                 withCredentials([string(credentialsId: 'chintanaws', variable: 'Dockerpwd')]) {
                     sh "docker login -u chintanaws -p ${Dockerpwd}"
                 }
             }                
